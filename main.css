@@ -1,0 +1,28 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #222;
+}
+
+.border-box {
+    width: 200px;
+    height: 200px;
+    border: 2px solid white;
+    position: relative;
+}
+
+.moving-square {
+    width: 40px;
+    height: 40px;
+    background-color: #e74c3c;
+    position: absolute;
+    animation: moveAround 4s linear infinite;
+}
+
+@keyframes moveAround {
+    0% { top: 0; left: 0; }
+    25% { top: 0; left: 100%; transform: translateX(-100%); }
+    50% { top: 100%; left: 100%; transform: translate(-100%, -100%); }
+    75% { top: 100%; left: 0; transform: translateY
